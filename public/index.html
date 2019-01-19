@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <style>
+        body {
+            background-color: rgba(30, 170, 235, 0.466)
+        }
+        #lead {
+            background-color: blueviolet
+        }
+
+        #wrapper {
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5%;
+        }
+
+        #articles {
+            display: inline-block;
+            overflow: auto;
+            width: 60%;
+            height: 700px;
+        }
+
+        #notes {
+            float: right;
+            width: 40%;
+            border-width: 15;
+        }
+
+        #jumbotron {
+            background-color: darksalmon;
+            font-style: italic;
+        }
+
+        textarea,
+        input {
+            display: block;
+            width: 100%;
+            background-color: rgb(204, 57, 230);
+        }
+
+        input {
+            height: 36px;
+            font-size: 24px;
+            padding-bottom: 5%;
+        }
+
+        textarea {
+            height: 200px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="wrapper">
+            <div class="jumbotron">
+            <h1 class="display-4">Note Scraper</h1>
+            <h2 class="lead">Scrape the latest political news from The Hill!</h2>
+            <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape!</a>
+        </div>
+        <div>
+            <div id="articles" class="text-center col-lg-6"></div>
+            <div id="notes" class="col-lg-6"></div>
+        
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
