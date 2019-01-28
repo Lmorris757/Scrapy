@@ -26,7 +26,10 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
+var MONGODB_URI = "mongodb://localhost/unit18Populater";
+
+mongoose.connect(MONGODB_URI);
+   
 
 app.get("/scrape", (req, res) => {
     axios.get("https://thehill.com/").then(function (response) {
